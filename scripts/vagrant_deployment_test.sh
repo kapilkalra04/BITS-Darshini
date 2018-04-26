@@ -12,8 +12,8 @@ bash scripts/redeploy.sh
 bash scripts/redeploy.sh
 
 #run deployment test
-curl -H "Content-Type: application/json" -d '{"email": "abc", "password": "abc"}' http://localhost:8080/protocolanalyzer/signup
-curl -H "Content-Type: application/json" -d '{"email": "abc", "password": "abc"}' http://localhost:8080/protocolanalyzer/signin
+#curl -H "Content-Type: application/json" -d '{"email": "abc", "password": "abc"}' http://localhost:8080/protocolanalyzer/signup
+#curl -H "Content-Type: application/json" -d '{"email": "abc", "password": "abc"}' http://localhost:8080/protocolanalyzer/signin
 
 pcapFile="/tmp/packet_data.pcap"
 protocolGraphPath="/data/graph.p4"
