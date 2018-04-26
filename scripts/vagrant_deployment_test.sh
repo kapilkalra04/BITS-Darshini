@@ -29,7 +29,7 @@ cat /opt/darshini-logs/darshini
 grep 'PcapAnalyzer:104 - Final read count = 214' /opt/darshini-logs/darshini
 grep 'PerformanceMetrics:71 - Total experiment Duration :' /opt/darshini-logs/darshini
 
-#eemove the temporary log,packet data and graph
+#remove the temporary log,packet data and graph
 truncate -s 0 /opt/darshini-logs/darshini
 sudo rm /tmp/packet_data.pcap
 sudo rm /tmp/graph.p4

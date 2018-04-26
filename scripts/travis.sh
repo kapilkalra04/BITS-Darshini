@@ -32,7 +32,7 @@ sudo chown -R tomcat:tomcat /opt/tomcat
 sudo cp conf/tomcat-users.xml /opt/tomcat/conf/tomcat-users.xml
 sudo chown tomcat:tomcat /opt/tomcat/conf/tomcat-users.xml
 
-#give permissions to tomcat over packet-files(packet_data.pcap)
+give permissions to tomcat over packet-files(packet_data.pcap) and protocol-graphs(graph.p4)
 cp data/packet/packet_data.pcap /tmp/packet_data.pcap
 cp data/graph.p4 /tmp/graph.p4
 sudo chown tomcat:tomcat /tmp/packet_data.pcap
