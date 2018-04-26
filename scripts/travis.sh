@@ -34,7 +34,9 @@ sudo chown tomcat:tomcat /opt/tomcat/conf/tomcat-users.xml
 
 #give permissions to tomcat over packet-files(packet_data.pcap)
 cp data/packet/packet_data.pcap /tmp/packet_data.pcap
+cp data/graph.p4 /tmp/graph.p4
 sudo chown tomcat:tomcat /tmp/packet_data.pcap
+sudo chown tomcat:tomcat /tmp/graph.p4
 
 #start tomcat
 sudo -H -u tomcat bash -c '/opt/tomcat/bin/startup.sh'
@@ -70,7 +72,7 @@ curl -H "Content-Type: application/json" -d '{"email": "abc", "password": "abc"}
 
 dir=$(pwd)
 pcapFile="/tmp/packet_data.pcap"
-protocolGraphPath="$dir/data/graph.p4"
+protocolGraphPath="/tmp/graph.p4"
 
 curl -X GET -H "Content-Type: application/json" http://localhost:8080/protocolanalyzer/test?pcapPath="$pcapFile"\&protocolGraphPath="$protocolGraphPath"
 sleep 90

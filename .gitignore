@@ -4,4 +4,5 @@
 .project
 .vagrant
 src/main/webapp/WEB-INF/node_modules
+src/main/webapp/WEB-INF/package-lock.json
 data/log
