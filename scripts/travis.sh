@@ -25,14 +25,14 @@ fi
 sudo mkdir /opt/tomcat
 sudo tar xzf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
 
-#Give the tomcat user ownership over the entire installation directory:
+#give the tomcat user ownership over the entire installation directory:
 sudo chown -R tomcat:tomcat /opt/tomcat
 
 #give the tomcat group read access to the conf directory and all of its contents, and execute access to the directory itself
 sudo cp conf/tomcat-users.xml /opt/tomcat/conf/tomcat-users.xml
 sudo chown tomcat:tomcat /opt/tomcat/conf/tomcat-users.xml
 
-give permissions to tomcat over packet-files(packet_data.pcap) and protocol-graphs(graph.p4)
+#give permissions to tomcat over packet-files(packet_data.pcap) and protocol-graphs(graph.p4)
 cp data/packet/packet_data.pcap /tmp/packet_data.pcap
 cp data/graph.p4 /tmp/graph.p4
 sudo chown tomcat:tomcat /tmp/packet_data.pcap
